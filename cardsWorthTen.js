@@ -21,7 +21,14 @@ const cards = [
  * @param {array} cards
  * @return {string} displayVal
  */
-const cardsWorthTen = cards => {};
+
+
+const cardsWorthTen = cards => {
+  
+   //filter out all objects that match a val of 10 and then only output the displayVal
+return cards.filter(({val}) => val === 10).map(card => card.displayVal).join(', ')
+    
+};
 
 console.log(cardsWorthTen(cards));
 // should return/log "10, Jack, Queen, King"
